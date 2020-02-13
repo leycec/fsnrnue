@@ -14,7 +14,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
 
 [Current releases][releases] include:
 
-* **[Linux Lutris installer][installer-remote].
+* **[Linux Lutris installer][installer-remote].**
 * **[64-bit Windows
   installer](https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-64.zip).**
 * **[32-bit Windows
@@ -22,7 +22,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
 
 ## but how?
 
-1. Get **Fate/stay night [Réalta Nua].** Sadly, all versions of *Fate/stay
+1. **Get _Fate/stay night [Réalta Nua]_.** Sadly, all versions of *Fate/stay
    night* (including the most recent *[Réalta Nua]* release) are unavailable
    for purchase and [thus constitute
    abandonware](https://en.wikipedia.org/wiki/Abandonware). Instead:
@@ -45,10 +45,10 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
         * [Debian-based distributions (e.g.,
           Ubuntu)](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
      1. **[Install *Lutris*][lutris].**
-     1. **[Click this Lutris installer link][installer-remote],** which
+     1. **[Click this *Lutris installer link*][installer-remote],** which
         automates the installation process by both downloading *and* running
         this installer with [Lutris][lutris]. Command-line aficionados may also
-        manually run this installer under the command line as follows:
+        manually run this installer under the command line:
         1. [Download this YAML file][installer-local].
         1. Open a terminal to the directory containing this YAML file.
         1. Copy-and-paste this command into the terminal:
