@@ -8,12 +8,12 @@ script:
   files:
     - ultimate_edition: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
     - lav_filters: https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe
-    - game_fa:       N/A:Select downloaded file "Fate.rar"
-    - game_fa_crack: N/A:Select downloaded file "Fate Crack.rar"
-    - game_hf:       N/A:Select downloaded file "Heaven's Feel.7z"
-    - game_hf_crack: N/A:Select downloaded file "Heaven's Feel Crack.rar"
-    - game_ub:       N/A:Select downloaded file "Unlimited Blade Works.rar"
-    - game_ub_crack: N/A:Select downloaded file "Unlimited Blade Works Crack.rar"
+    - game_fa:       N/A:Select source file "Fate.rar"
+    - game_fa_crack: N/A:Select source file "Fate Crack.rar"
+    - game_hf:       N/A:Select source file "Heaven's Feel.7z"
+    - game_hf_crack: N/A:Select source file "Heaven's Feel Crack.rar"
+    - game_ub:       N/A:Select source file "Unlimited Blade Works.rar"
+    - game_ub_crack: N/A:Select source file "Unlimited Blade Works Crack.rar"
 
   game:
     exe: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe
