@@ -6,78 +6,62 @@ runner: wine
 
 script:
   files:
-    - ultimate_edition: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-64.zip
+    - ultimate_edition: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
     - lav_filters: https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe
-    - game_fa:       N/A:Select "Fate.rar".
-    - game_fa_crack: N/A:Select "Fate Crack.rar".
-    - game_hf:       N/A:Select "Heaven's Feel.7z".
-    - game_hf_crack: N/A:Select "Heaven's Feel Crack.rar".
-    - game_ub:       N/A:Select "Unlimited Blade Works.rar".
-    - game_ub_crack: N/A:Select "Unlimited Blade Works Crack.rar".
+    - game_fa:       N/A:Select downloaded file "Fate.rar"
+    - game_fa_crack: N/A:Select downloaded file "Fate Crack.rar"
+    - game_hf:       N/A:Select downloaded file "Heaven's Feel.7z"
+    - game_hf_crack: N/A:Select downloaded file "Heaven's Feel Crack.rar"
+    - game_ub:       N/A:Select downloaded file "Unlimited Blade Works.rar"
+    - game_ub_crack: N/A:Select downloaded file "Unlimited Blade Works Crack.rar"
 
   game:
-    #FIXME: Update this with the actual executable filename.
-    exe: C:/Program Files (x86)/Fate/Fate.exe
-    # exe: drive_c/Program Files (x86)/Fate/Fate.exe
-    # args: --exec="launch Pro"
-    arch: win64
+    exe: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe
+    arch: win32
     prefix: $GAMEDIR
 
   installer:
     - task:
         description: Creating WINE prefix...
         name: create_prefix
-        arch: win64
+        arch: win32
         prefix: $GAMEDIR
+    - extract:
+        file: ultimate_edition
+        dst: $GAMEDIR/drive_c/Program Files
+    - extract:
+        file: game_fa
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-
+    - extract:
+        file: game_fa_crack
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-
+    - extract:
+        file: game_hf
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-
+    - extract:
+        file: game_hf_crack
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-
+    - extract:
+        file: game_ub
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-
+    - extract:
+        file: game_ub_crack
+        dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-
     - task:
         description: Installing winetricks-based dependencies...
         name: winetricks
         app: d3dx9 quartz vcrun2015 win7
-        arch: win64
+        arch: win32
         prefix: $GAMEDIR
     - task:
-        description: Installing LavFilter-based DirectShow emulation...
+        description: Installing LAVFilters-based DirectShow emulation...
         name: wineexec
         executable: lav_filters
-        arch: win64
+        arch: win32
         prefix: $GAMEDIR
-    - extract:
-        file: ultimate_edition
-        dst: $GAMEDIR/drive_c/patch
-    #FIXME: We may also need to remove "video.xp3" from each of these folders.
-    - extract:
-        src: game_fa
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Fate-
-    - extract:
-        src: game_hf
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Heaven's Feel-
-    - extract:
-        src: game_ub
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Unlimited Blade Works-
-    - move:
-        src: $GAMEDIR/drive_c/game/Fate／stay night[Realta Nua] -Fate-
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Fate-
-    - move:
-        src: $GAMEDIR/drive_c/game/Fate／stay night[Realta Nua] -Heaven's Feel-
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Heaven's Feel-
-    - move:
-        src: $GAMEDIR/drive_c/game/Fate／stay night[Realta Nua] -Unlimited Blade Works-
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Unlimited Blade Works-
-    - extract:
-        file: game_fa_crack
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Fate-
-    - extract:
-        file: game_hf_crack
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Heaven's Feel-
-    - extract:
-        file: game_ub_crack
-        dst: $GAMEDIR/drive_c/game/Fate stay night[Realta nua] -Unlimited Blade Works-
     - task:
-        description: Select "C:/game/" as the install folder!
+        description: Installing Fate/stay night [Realta Nua] Ultimate Edition...
         name: wineexec
-        executable: $GAMEDIR/drive_c/patch/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe
-        arch: win64
+        executable: $GAMEDIR/drive_c/Program Files/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe
+        arch: win32
         prefix: $GAMEDIR
-    - execute:
-        description: Cleaning up...
-        command: rm -rf $GAMEDIR/drive_c/{game,patch}

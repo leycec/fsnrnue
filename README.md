@@ -63,20 +63,36 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
      *should* be feasible if non-trivial. If someone does so, please submit an
      [issue](https://github.com/leycec/fsnrnue/issues) or [pull
      request](https://github.com/leycec/fsnrnue/pulls) and we'll update these
-     instructions accordingly. Thanks, all!
+     instructions accordingly.
 
-## but why?
+We strongly recommend:
 
-...because the [official release
-links](http://forums.nrvnqsr.com/showthread.php/8229) are all hosted at Google
-Drive, whose user experience (UX) for large downloads [effectively prohibits
-automated
-downloads](https://stackoverflow.com/questions/14728038/disabling-the-large-file-notification-from-google-drive).
-This renders those links unusable from automated downstream installers like
-[Lutris][lutris] and [PlayOnMac][playonmac], which is bad. This repository
-hosts alternative links compatible with headless downloaders like
-[curl](https://curl.haxx.se) and [wget](https://www.gnu.org/software/wget)
-commonly run from such installers, which is good.
+* *Not* installing the **OP Patch** (i.e., the patch adding opening movies
+  bundled with the PS Vita version) during the Ultimate Edition installer.
+  These movies contain heavy spoilers – particularly for Heaven's Feel, the
+  final route and grand finale. All remaining patches are spoiler-free.
+* *Not* enabling the *Display* → *Aspect Ratio* → *Wide* option, which
+  currently suffers a variety of unresolved issues.
+
+Lastly, note these [undocumented keyboard
+shortcuts](https://www.reddit.com/r/fatestaynight/comments/42vvy4/keyboard_shortcutshotkeys_for_fatestay_night_vn):
+
+Key | Action
+--- | ---
+Space/Enter | Next line (& pause auto-read)
+Down/Up Arrow | Next/Previous
+A | Auto-read (toggle)
+R | Review history/previous page
+F | Fast skip to next scene or choice
+Ctrl | Fast skip pages/scenes (hold)
+S | Save menu
+L | Load menu
+Q | Quick Save/Load (for F1-F9)
+F1-F9 | Quick load specific save data slot
+Esc | Menu
+Backspace | Show background (hide text)
+Alt+Enter | Toggle fullscreen
+C | Config
 
 ## but who?
 
@@ -114,6 +130,8 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
     translation.
   * **bishopcruz and Annonymous:** First H uncensor patch.
   * **Himeros and Belldandy100:** Second H uncensor patch.
+  * **[/u/dumbyoyo](https://www.reddit.com/user/dumbyoyo):** Keyboard
+    shortcuts.
   * Special thanks to [any other BL members](http://forums.nrvnqsr.com) who
     helped out.
 
