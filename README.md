@@ -3,19 +3,26 @@
 Fate/stay night [Réalta Nua] Ultimate Edition
 =============================================
 
-This repository [unofficially hosts GitHub-managed downloads][releases] for the
-[Fate/stay night \[Réalta Nua\] Ultimate
-Edition][ultimate] – a pair of third-party 32- and 64-bit Windows installers
-automating both the installation and patching of the [Réalta
-Nua](https://typemoon.fandom.com/wiki/Fate/stay_night#R.C3.A9alta_Nua) variant
-of the seminal Japanese visual novel [*Fate/stay
+This repository [unofficially hosts GitHub-managed downloads][releases] for
+*[Fate/stay night \[Réalta Nua\] Ultimate
+Edition][ultimate]* – a pair of third-party 32- and 64-bit Windows installers
+automating the installation, patching, and execution of the *[\[Réalta
+Nua\]](https://typemoon.fandom.com/wiki/Fate/stay_night#R.C3.A9alta_Nua)*
+variant of the seminal Japanese visual novel [*Fate/stay
 night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
 
 ## Downloads
 
 [Current downloads hosted at this repository][releases] include:
 
-* **[Linux Lutris installer][installer-remote].**
+* [Lutris-based][lutris] Linux installers: <sup>*see [installation
+  instructions below](#installation)*</sup>
+  * _(Recommended)_ **[One-click installer][installer-remote],** automatically
+    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate]*
+    via [lutris.net browser integration](https://lutris.net/faq#url-handler).
+  * **[Offline installer][installer-local],** suitable for manually
+    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate]*
+    via the `lutris -i` command-line option.
 * **[64-bit Windows
   installer](https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-64.zip).**
 * **[32-bit Windows
@@ -51,15 +58,18 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
         * [Debian-based distributions (e.g.,
           Ubuntu)](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
      1. **[Install *Lutris*][lutris].**
-     1. **[Click this *Lutris installer link*][installer-remote],** which
-        automates the installation process by both downloading *and* running
-        this installer with [Lutris][lutris]. Command-line aficionados may also
-        manually run this installer under the command line:
-        1. [Download this YAML file][installer-local].
-        1. Open a terminal to the directory containing this YAML file.
-        1. Copy-and-paste this command into that terminal:
-
-               lutris -i fate-stay-night-realta-nua-ultimate-edition.yml
+     1. **Install _Fate/stay night \[Réalta Nua\] Ultimate Edition_** with
+        either:
+        * *(Recommended)* **[Our one-click installer][installer-remote],**
+          automating installation by transparently downloading and running this
+          installer under *[Lutris][lutris].*
+        * **Our offline installer,** manually runnable at the command line as
+          follows:
+          1. [Download this file][installer-local].
+          1. Open a terminal to the directory containing that file.
+          1. Copy-and-paste this command into that terminal:
+         
+                 lutris -i fate-stay-night-realta-nua-ultimate-edition.yml
 
    * **macOS is currently unsupported,** as [Lutris][lutris] is currently
      Linux-specific. In theory, porting our [Lutris-specific
@@ -221,4 +231,5 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
 [releases]:  https://github.com/leycec/fsnrnue/releases
 [ultimate]:  https://forums.nrvnqsr.com/showthread.php/8229
 [installer-local]:  /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
-[installer-remote]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
+[installer-remote]: /lutris/lutris_installer_redirect.html
+/lutris/fate-stay-night-realta-nua-ultimate-edition.yml
