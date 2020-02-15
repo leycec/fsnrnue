@@ -230,6 +230,6 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
 [playonmac]: https://www.playonmac.com
 [releases]:  https://github.com/leycec/fsnrnue/releases
 [ultimate]:  https://forums.nrvnqsr.com/showthread.php/8229
-[installer-local]:  /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
-[installer-remote]: /lutris/lutris_installer_redirect.html
+[installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
+[installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
 /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
