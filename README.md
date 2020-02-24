@@ -225,6 +225,8 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
   * Special thanks to [any other BL members](http://forums.nrvnqsr.com) who
     helped out.
 
+This Linux support's for you, stalwart Nasuverse heroes.
+
 
 [lutris]:    https://lutris.net
 [playonmac]: https://www.playonmac.com
@@ -232,4 +234,3 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
 [ultimate]:  https://forums.nrvnqsr.com/showthread.php/8229
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
 [installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
-/lutris/fate-stay-night-realta-nua-ultimate-edition.yml
