@@ -1,15 +1,23 @@
 ![Fate/stay night \[Réalta Nua\]](https://user-images.githubusercontent.com/217028/74502954-3ada0500-4ee7-11ea-849e-1ef29f34b512.jpg)
 
-Fate/stay night [Réalta Nua] Ultimate Edition
-=============================================
+Fate/stay night [Réalta Nua] Ultimate Edition… for Linux!
+=========================================================
 
-This repository [unofficially hosts GitHub-managed downloads][releases] for
-*[Fate/stay night \[Réalta Nua\] Ultimate
-Edition][ultimate]* – a pair of third-party 32- and 64-bit Windows installers
-automating the installation, patching, and execution of the *[\[Réalta
-Nua\]](https://typemoon.fandom.com/wiki/Fate/stay_night#R.C3.A9alta_Nua)*
-variant of the seminal Japanese visual novel [*Fate/stay
+This repository officially hosts the [Lutris-based **Linux**
+installer][ultimate-lutris] for *[Fate/stay night \[Réalta Nua\] Ultimate
+Edition][ultimate-bl]* – a fan-driven third-party application automating the
+installation, patching, and execution of the *[\[Réalta Nua\]
+variant](https://typemoon.fandom.com/wiki/Fate/stay_night#R.C3.A9alta_Nua)* of
+the [seminal Japanese visual novel *Fate/stay
 night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
+
+> ⚠️
+
+> This repository does *not* officially host **Windows** installers for
+> *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate-bl]*. If you are
+> a **Windows** user and currently having issues under **Windows**, please
+> [direct bug reports to the upstream forum discussion][ultimate-bl] at the
+> [Beast's Lair][beasts-lair]. Thanks – and sorry for the confusion! 😅
 
 ## Downloads
 
@@ -18,15 +26,15 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
 * [Lutris-based][lutris] Linux installers: <sup>*see [installation
   instructions below](#installation)*</sup>
   * _(Recommended)_ **[One-click installer][installer-remote],** automatically
-    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate]*
+    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate-bl]*
     via [lutris.net browser integration](https://lutris.net/faq#url-handler).
   * **[Offline installer][installer-local],** suitable for manually
-    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate]*
+    installing *[Fate/stay night \[Réalta Nua\] Ultimate Edition][ultimate-bl]*
     via the `lutris -i` command-line option.
-* **[64-bit Windows
-  installer](https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-64.zip).**
-* **[32-bit Windows
+* _(Unofficial)_ **[32-bit Windows
   installer](https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip).**
+* _(Unofficial)_ **[64-bit Windows
+  installer](https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-64.zip).**
 
 ## Installation
 
@@ -50,7 +58,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
      1. First, follow [steps 1, 2, and 3 *only* of the "Fate/Stay Night VN
         Installation Guide
         VII."](https://www.reddit.com/r/fatestaynight/comments/7qh6ho/fatestay_night_vn_installation_guide_vii)
-     1. Then follow the [official Ultimate Edition instructions][ultimate].
+     1. Then follow the [official Ultimate Edition instructions][ultimate-bl].
    * **Linux:**
      1. _(Recommended)_ **[Install *Wine
         Staging*](https://wiki.winehq.org/Wine-Staging).** See also
@@ -128,9 +136,9 @@ If you receive an error resembling `"Script exception raised Read error"` or
 `"Script exception raised file://./c/program files/fate／stay night[realta nua]
 ultimate edition/patch.xp3 is not XP3 archive or unsupported"` at game startup,
 the Ultimate Edition installer failed to properly download one or more patches.
-All such patches are locally corrupt and *must* be [manually redownloaded from
-the Google Drive links given under the **Mandatory patches** section of the
-original release notes for the Ultimate Edition][ultimate] into the
+These patches are locally corrupt and *must* be [manually redownloaded from
+Google Drive links listed under the **Mandatory patches** section of the
+original release notes for the Ultimate Edition][ultimate-bl] into the
 `fate-stay-night-realta-nua-ultimate-edition/drive_c/Program Files/Fate／stay
 night[Realta Nua] Ultimate Edition/` subdirectory to which the Ultimate Edition
 previously installed itself, overwriting each existing corrupt patch.
@@ -228,9 +236,11 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
 This Linux support's for you, stalwart Nasuverse heroes.
 
 
-[lutris]:    https://lutris.net
+[ultimate-lutris]: https://lutris.net/games/fatestay-night
+[lutris]: https://lutris.net
 [playonmac]: https://www.playonmac.com
-[releases]:  https://github.com/leycec/fsnrnue/releases
-[ultimate]:  https://forums.nrvnqsr.com/showthread.php/8229
+[releases]: https://github.com/leycec/fsnrnue/releases
+[ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/8229
+[beasts-lair]: https://forums.nrvnqsr.com
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
 [installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html

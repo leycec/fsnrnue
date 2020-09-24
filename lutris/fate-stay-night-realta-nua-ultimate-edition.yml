@@ -6,8 +6,21 @@ runner: wine
 
 script:
   files:
-    - ultimate_edition: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
+    - ultimate_edition_0_9_1: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
     - lav_filters: https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe
+
+    #FIXME: Uncomment the following lines after adding support for the next stable
+    #release of the Ultimate Edition.
+    # Whereas the Ultimate Edition 0.9.1 download is a minimal installer
+    # conditionally downloading large patch files from remote hosts at runtime,
+    # the Ultimate Edition 1.0.0 beta provides *NO* installer but instead
+    # unconditionally bundles all large patch files in a single mega.nz-hosted
+    # 1.93GB zipfile intended to be extracted over existing 0.9.1
+    # installations. So, we only automatically download the 0.9.1 release.
+    # Hopefully, the official 1.0.0 release will revert back to an installer.
+    #- ultimate_edition_1_0_0_beta: N/A:Select source file "Fate stay night Ultimate Edition v1.0.0-beta-2020-02-29.zip"
+    #- mpv: https://sourceforge.net/projects/mpv-player-windows/files/stable/mpv-0.32.0-i686.7z/download
+
     - game_fa:       N/A:Select source file "Fate.rar"
     - game_fa_crack: N/A:Select source file "Fate Crack.rar"
     - game_hf:       N/A:Select source file "Heaven's Feel.7z"
@@ -27,7 +40,7 @@ script:
         arch: win32
         prefix: $GAMEDIR
     - extract:
-        file: ultimate_edition
+        file: ultimate_edition_0_9_1
         dst: $GAMEDIR/drive_c/Program Files
     - extract:
         file: game_fa
@@ -65,3 +78,15 @@ script:
         executable: $GAMEDIR/drive_c/Program Files/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe
         arch: win32
         prefix: $GAMEDIR
+    #FIXME: Extract the 1.0.0 beta patches here.
+    #FIXME: We probably need to manually delete the
+    #"$GAMEDIR/drive_c/My Documents/fate_savedata" subdirectory (or wherever
+    #that subdirectory lives) to avoid issues with 1.0.0 beta.
+    #FIXME: Uncomment the following lines after adding support for the next stable
+    #release of the Ultimate Edition.
+    #- extract:
+    #    file: ultimate_edition_1_0_0_beta
+    #    dst: $GAMEDIR/drive_c/Program Files
+    #- extract:
+    #    file: mpv
+    #    dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition
