@@ -130,28 +130,76 @@ C | Config
 
 ## FAQ
 
-#### How to resolve `"Script exception raised"` errors at startup?
+#### It doesn't even start, though?
 
-If you receive an error resembling `"Script exception raised Read error"` or
-`"Script exception raised file://./c/program files/fate／stay night[realta nua]
-ultimate edition/patch.xp3 is not XP3 archive or unsupported"` at game startup,
-the Ultimate Edition installer failed to properly download one or more patches.
-These patches are locally corrupt and *must* be [manually redownloaded from
-Google Drive links listed under the **Mandatory patches** section of the
-original release notes for the Ultimate Edition][ultimate-bl] into the
+Startup failures are *almost* always due to **corrupt patch downloads.** If
+you see any of the following at startup, the Ultimate Edition installer failed
+to properly download one or more patches for you:
+
+* An untranslated GUI error message entitled with indecipherable Japanese kanji
+  and text resembling:
+  
+  > ☐☐☐☐☐☐
+  > file://./c/program/files/fate☐stay night[realta
+  > nua] ultimate edition/patch.xp3 ☐☐ XP3 ☐☐☐☐
+  > ☐☐☐☐☐☐☐☐☐
+
+    ![startup-gui-error-corrupt-patch](https://user-images.githubusercontent.com/217028/94880506-a19a3780-0452-11eb-9bd8-146338027136.png)
+
+* A translated GUI error message entitled "Script exception raised Read error"
+  with text resembling:
+
+  > Script exception raised
+  > file://./c/program files/fate／stay night[realta
+  > nua] ultimate edition/patch.xp3 is not XP3 archive or
+  > unsupported.
+
+* A log error message containing lines resembling:
+
+```
+16:22:47 ==== An exception occured at initialize.tjs(214)[(top level script) global], VM ip = 694 ====
+16:22:47 -- Disassembled VM code --
+16:22:47 #(214) if(Storages.isExistentStorage("Config.tjs"))
+16:22:47 00000687 const %1, *70	// *70 = (string)"Config.tjs"
+16:22:47 00000690 gpd %2, %-2.*71	// *71 = (string)"Storages"
+16:22:47 00000694 calld %3, %2.*72(%1)	// *72 = (string)"isExistentStorage"
+16:22:47 -- Register dump --
+16:22:47 %-7=(object)(object 0x00FA1778:0x00FA1778)  %-6=(string)"type"  %-5=(int)28  %-4=(void)
+16:22:47 %-3=(void)  %-2=(object)(object 0x0032F684:0x00000000)
+16:22:47 %-1=(object)(object 0x00F800E0:0x00F800E0)  %0=(void)  %1=(string)"Config.tjs"
+16:22:47 %2=(object)(object 0x00F9DB28:0x00000000)  %3=(void)
+16:22:47 %4=(object)(object 0x00FA6968:0x00000000)  %5=(object)(object 0x00FAA650:0x00000000)
+16:22:47 %6=(string)"Win32"  %7=(string)")"  %8=(object)(object 0x00FA6968:0x00000000)
+16:22:47 ---------------------------------------------------------------------------------------------
+
+16:22:47 trace : startup.tjs(27)[(top level script) global] <-- startup
+```
+
+#### That's what I'm seeing, I think?
+
+**Great!** Well, not great – but it could be worse. You could be Shiro in any
+of the Dead Ends you're about to compulsively read just to collect all of the
+Taiga Dojo stamps just to witness the true beauty of a hot springs bath scene.
+<sup>Totally worth it.</sup>
+
+So, we've confirmed the Ultimate Edition installer failed to properly download
+one or more patches for you. These patches are locally corrupt and *must* be
+[manually redownloaded from Google Drive links listed under the **Mandatory
+patches** section of the original release notes for the Ultimate
+Edition][ultimate-bl] into the
 `fate-stay-night-realta-nua-ultimate-edition/drive_c/Program Files/Fate／stay
 night[Realta Nua] Ultimate Edition/` subdirectory to which the Ultimate Edition
 previously installed itself, overwriting each existing corrupt patch.
 
-If unsure of which patches exactly require redownloading, either:
+If you're unsure which corrupt patches need to be redownloaded, either blindly
+redownload *all* of them or:
 
-* Entirely remove the existing corrupt *Fate/stay night* installation and
-  [retry from step #2 above](#installation). 
 * Inspect the aforementioned subdirectory for 0-byte filenames prefixed by
   `patch_`: e.g.,
 
 ```
-$ ls -l
+$ ls -l $HOME/Games/fate-stay-night-realta-nua-ultimate-edition/drive_c/Program Files/Fate／stay
+night[Realta Nua] Ultimate Edition/
 total 4.8G
 drwxr-xr-x  3 leycec leycec 4.0K Feb 14 01:23 .
 drwxr-xr-x 11 leycec leycec 4.0K Feb 14 00:50 ..
@@ -190,7 +238,20 @@ drwxr-xr-x  2 leycec leycec 4.0K Feb 14 01:23 savedata
 ```
 
 In both cases, the decensor patch (i.e., `patch_decensor.xp3`) is corrupt and
-should be manually redownloaded.
+must be manually redownloaded. It would be the decensor patch, wouldn't it?
+
+#### That's not what I'm seeing, though?
+
+Then here's what we're going to do:
+
+1. Run *Lutris.*
+1. Right-click the *Fate/stay night* entry.
+1. Click the *Show logs* menu item.
+1. Copy the contents of the displayed log to the clipboard.
+1. [Paste those contents into a new
+   issue of our issue tracker](https://github.com/leycec/fsnrnue/issues/new).
+
+We'll get you sorted right out. Promise.
 
 ## Authors
 
