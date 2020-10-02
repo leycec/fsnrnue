@@ -177,9 +177,9 @@ to properly download one or more patches for you:
 
 #### That's what I'm seeing, I think?
 
-**Great!** Well, not great – but it could be worse. You could be Shiro in any
-of the Dead Ends you're about to compulsively read just to collect all of the
-Taiga Dojo stamps just to witness the true beauty of a hot springs bath scene.
+**Great!** Well, not great – but things could be worse. You could be Shiro in
+any of the Dead Ends you're about to compulsively read just to collect all of
+the Taiga Dojo stamps just to unlock a ridiculous hot springs bath scene.
 <sup>Totally worth it.</sup>
 
 So, we've confirmed the Ultimate Edition installer failed to properly download
@@ -255,8 +255,7 @@ We'll get you sorted right out. Promise.
 
 #### I see something about Vulkan and `dxvk` in those logs, I think?
 
-If you see a log error message containing lines resembling the following, then
-we can help you help fix yourself:
+Do you see log errors resembling the following?
 
 ```
 info: Game: Fate.exe
@@ -273,9 +272,10 @@ All monitored processes have exited.
 Exit with returncode 768
 ```
 
-Yes? Excellent! Great work. Now you're *really* almost there.
+If so, **great!** Well, not great – but things could be worse. You could always
+be running Windows, which is like a real-life Dead End you inflict on yourself.
 
-First, let's refresh your faded memories about obscure APIs and acronyms:
+First, let's refresh your faded memories of obscure APIs and acronyms:
 
 * **[Vulkan][vulkan]** is the official replacement for
   [OpenGL](https://en.wikipedia.org/wiki/OpenGL), a popular cross-platform
@@ -308,7 +308,7 @@ You have two options here:
   1. Disable the *Enable DXVK/VKD3D* setting.
   1. You're done. *Praise Ilya!*
 * **Fix your broken [Vulkan][vulkan] and [DXVK][dxvk] installation.** This is
-  the hard way, but you probably want to do this eventually anyway.
+  the hard way, but you probably want to do this eventually *anyway*.
   Instructions for properly installing and configuring [Vulkan][vulkan] and
   [DXVK][dxvk] vary by platform. For example, users on Arch-based Linux distros
   should:
