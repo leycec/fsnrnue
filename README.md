@@ -253,6 +253,79 @@ Then here's what we're going to do:
 
 We'll get you sorted right out. Promise.
 
+#### I see something about Vulkan and `dxvk` in those logs, I think?
+
+If you see a log error message containing lines resembling the following, then
+we can help you help fix yourself:
+
+```
+info: Game: Fate.exe
+info: DXVK: v1.7.1-2-g743f309
+info: Built-in extension providers:
+info: Win32 WSI
+info: OpenVR
+warn: OpenVR: Failed to locate module
+info: Required Vulkan extension VK_KHR_surface not supported
+terminate called after throwing an instance of 'dxvk :: DxvkError'
+Game is considered exited.
+Initial process has exited.
+All monitored processes have exited.
+Exit with returncode 768
+```
+
+Yes? Excellent! Great work. Now you're *really* almost there.
+
+First, let's refresh your faded memories about obscure APIs and acronyms:
+
+* **[Vulkan][vulkan]** is the official replacement for
+  [OpenGL](https://en.wikipedia.org/wiki/OpenGL), a popular cross-platform
+  GPU-accelerated 3D rendering API. So, [Vulkan][vulkan] = OpenGL 2.0. Sorta.
+  Close enough.
+* **[DXVK](dxvk)** is a [Vulkan][vulkan]-based Linux-specific translation layer
+  that internally converts Windows-specific DirectX 9, 10, and 11 GPU logic
+  into equivalent [Vulkan][vulkan] logic.
+
+Next, let's inspect the warnings and errors in the above error message:
+
+* The `"warn: OpenVR: Failed to locate module"` line is safely ignorable. That
+  just means you don't have a virtual reality (VR) headset connected, which is
+  fine. VR's nice and all, but that's not really what we're going for here.
+* The `"info: Required Vulkan extension VK_KHR_surface not supported"` line is
+  where your troubles start. **Your [Vulkan][vulkan] installation is broken.**
+  That's bad, because it means you won't be able to run any GPU-accelerated
+  [Vulkan][vulkan] games. Thankfully, *Fate/stay night* is so old that it runs
+  on decades-old potato PCs manufactured by RadioShack and doesn't really
+  benefit from GPU acceleration at all.
+
+You have two options here:
+
+* (*Recommended*) **Disable [Vulkan][vulkan] for *Fate/stay night*.** This is
+  the easy way:
+  1. Run *Lutris*.
+  1. Right-click the *Fate/stay night* entry.
+  1. Click the *Configure* menu item.
+  1. Click the *Runner options* tab.
+  1. Disable the *Enable DXVK/VKD3D* setting.
+  1. You're done. *Praise Ilya!*
+* **Fix your broken [Vulkan][vulkan] and [DXVK][dxvk] installation.** This is
+  the hard way, but you probably want to do this eventually anyway.
+  Instructions for properly installing and configuring [Vulkan][vulkan] and
+  [DXVK][dxvk] vary by platform. For example, users on Arch-based Linux distros
+  should:
+  1. Follow [the Vulkan installation instructions at the Arch
+     Wiki](https://wiki.archlinux.org/index.php/Vulkan#Installation).
+  1. Follow [the Wine installation instructions at the Arch
+     Wiki](https://wiki.archlinux.org/index.php/wine#Installation). **Note:
+     install `wine-staging` rather than `wine`.** Always use Wine Staging,
+     which is the bleeding-edge version of Wine that provides [DXVK][dxvk].
+     Never use standard Wine, which is the obsolete version of Wine that
+     provides literally nothing.
+  1. Watch [this YouTube video walking you through DXVK configuration under
+     Lutris with Wine
+     Staging](https://forums.lutris.net/t/how-to-setup-dxvk-on-lutris/1704).
+
+When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
+
 ## Authors
 
 Authoritative credit for the Ultimate Edition and bundled patches goes entirely
@@ -305,3 +378,5 @@ This Linux support's for you, stalwart Nasuverse heroes.
 [beasts-lair]: https://forums.nrvnqsr.com
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
 [installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
+[vulkan]: https://en.wikipedia.org/wiki/Vulkan_(API)
+[dxvk]: https://github.com/doitsujin/dxvk
