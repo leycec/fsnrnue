@@ -369,14 +369,25 @@ to the [Beast's Lair fandom](http://forums.nrvnqsr.com) – notably:
 
 This Linux support's for you, stalwart Nasuverse heroes.
 
+## See Also
 
-[ultimate-lutris]: https://lutris.net/games/fatestay-night
+If you enjoy this, you might also enjoy:
+
+* [*Ao no Kanata no Four Rhythm* (Aokana)… for Linux!][leycec-aokana], a
+  [Lutris installer][lutris] automating patching, installation, and execution
+  of the fan-produced native Linux port of the [shounen sports
+  chuunibyou][chuuni] visual novel *[Aokana][nekonyan-aokana]*.
+
+[beasts-lair]: https://forums.nrvnqsr.com
+[chuuni]: https://forums.fuwanovel.net/topic/1820-chuuni-what-is-this-genre
+[dxvk]: https://github.com/doitsujin/dxvk
+[installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
+[installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
+[leycec-aokana]: https://github.com/leycec/aokana-linux
 [lutris]: https://lutris.net
+[nekonyan-aokana]: https://nekonyansoft.com/shop/product/22
 [playonmac]: https://www.playonmac.com
 [releases]: https://github.com/leycec/fsnrnue/releases
 [ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/8229
-[beasts-lair]: https://forums.nrvnqsr.com
-[installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
-[installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
+[ultimate-lutris]: https://lutris.net/games/fatestay-night
 [vulkan]: https://en.wikipedia.org/wiki/Vulkan_(API)
-[dxvk]: https://github.com/doitsujin/dxvk
