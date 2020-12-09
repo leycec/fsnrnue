@@ -373,9 +373,9 @@ This Linux support's for you, stalwart Nasuverse heroes.
 
 If you enjoy this, you might also enjoy:
 
-* [*Ao no Kanata no Four Rhythm* (Aokana)… for Linux!][leycec-aokana], a
-  [Lutris installer][lutris] automating patching, installation, and execution
-  of the fan-produced native Linux port of the [shounen sports
+* [*Ao no Kanata no Four Rhythm* (Aokana)… for Linux!][leycec-aokana], a suite
+  of [Lutris installers][lutris] automating patching, installation, and
+  execution for the fan-produced native Linux port of the [shounen sports
   chuunibyou][chuuni] visual novel *[Aokana][nekonyan-aokana]*.
 
 [beasts-lair]: https://forums.nrvnqsr.com
