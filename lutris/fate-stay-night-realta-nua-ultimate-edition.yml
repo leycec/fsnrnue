@@ -65,19 +65,16 @@ results:
             description: Installing winetricks-based dependencies...
             name: winetricks
             app: d3dx9 quartz vcrun2015 win7
-            arch: win32
             prefix: $GAMEDIR
         - task:
             description: Installing LAVFilters-based DirectShow emulation...
             name: wineexec
             executable: lav_filters
-            arch: win32
             prefix: $GAMEDIR
         - task:
             description: Installing Fate/stay night [Realta Nua] Ultimate Edition...
             name: wineexec
             executable: $GAMEDIR/drive_c/Program Files/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe
-            arch: win32
             prefix: $GAMEDIR
         #FIXME: Extract the 1.0.0 beta patches here.
         #FIXME: We probably need to manually delete the

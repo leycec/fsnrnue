@@ -377,13 +377,21 @@ If you enjoy this, you might also enjoy:
   of [Lutris installers][lutris] automating patching, installation, and
   execution for the fan-produced native Linux port of the [shounen sports
   chuunibyou][chuuni] visual novel *[Aokana][nekonyan-aokana]*.
+* [*The Legend of Heroes: Trails of…* for Linux!][leycec-kiseki], [Lutris
+  installers][lutris] automating patching and execution of fully translated and
+  voiced [SoraVoice][kiseki-soravoice] variants of the [legendary *Kiseki*
+  (i.e., *Trails*, *Legend of Heroes*,『英雄伝説 …の軌跡』) Japanese
+  role-playing franchise][kiseki].
 
 [beasts-lair]: https://forums.nrvnqsr.com
 [chuuni]: https://forums.fuwanovel.net/topic/1820-chuuni-what-is-this-genre
 [dxvk]: https://github.com/doitsujin/dxvk
+[kiseki]: https://en.wikipedia.org/wiki/Trails_(series)
+[kiseki-soravoice]: https://github.com/ZhenjianYang/SoraVoice
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
 [installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
 [leycec-aokana]: https://github.com/leycec/aokana-linux
+[leycec-kiseki]:  https://github.com/leycec/kiseki-linux
 [lutris]: https://lutris.net
 [nekonyan-aokana]: https://nekonyansoft.com/shop/product/22
 [playonmac]: https://www.playonmac.com
