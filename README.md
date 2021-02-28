@@ -240,7 +240,23 @@ drwxr-xr-x  2 leycec leycec 4.0K Feb 14 01:23 savedata
 In both cases, the decensor patch (i.e., `patch_decensor.xp3`) is corrupt and
 must be manually redownloaded. It would be the decensor patch, wouldn't it?
 
-#### That's not what I'm seeing, though?
+#### That's also not what I'm seeing.
+
+…that's not even a question. You can tell because there's no question mark.
+
+#### I'm seeing an error at "initialize.tjs(245)"?
+
+Are you receiving an error resembling `"==== An exception occured at
+initialize.tjs(245)[(top level script) global], VM ip = 840 ===="`? If yes,
+then we're all on the same page, which is nice.
+
+Did you also install the optional Vita patch? If:
+
+* **Yes,** then [please try reinstalling *without* that
+  patch](https://github.com/leycec/fsnrnue/issues/9).
+* **No,** then continue to the next question.
+
+#### That's also not what I'm seeing, though?
 
 Then here's what we're going to do:
 
