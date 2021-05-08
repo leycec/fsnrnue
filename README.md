@@ -269,7 +269,7 @@ Then here's what we're going to do:
 
 We'll get you sorted right out. Promise.
 
-#### I see something about Vulkan and `dxvk` in those logs, I think?
+#### I see something about Vulkan and `dxvk` in those logs and a black screen on startup, I think?
 
 Do you see log errors resembling the following?
 
@@ -286,6 +286,23 @@ Game is considered exited.
 Initial process has exited.
 All monitored processes have exited.
 Exit with returncode 768
+```
+
+No? Then how about these:
+
+```
+info:  Game: Fate.exe
+info:  DXVK: v1.7.3-4-g03f11baf
+info:  Built-in extension providers:
+info:    Win32 WSI
+info:    OpenVR
+warn:  OpenVR: Failed to locate module
+info:  Enabled instance extensions:
+info:    VK_KHR_get_surface_capabilities2
+info:    VK_KHR_surface
+info:    VK_KHR_win32_surface
+warn:  Skipping Vulkan 1.0 adapter: llvmpipe (LLVM 11.0.0, 256 bits)
+warn:  DXVK: No adapters found. Please check your device filter settings and Vulkan setup.
 ```
 
 If so, **great!** Well, not great – but things could be worse. You could always
@@ -306,12 +323,15 @@ Next, let's inspect the warnings and errors in the above error message:
 * The `"warn: OpenVR: Failed to locate module"` line is safely ignorable. That
   just means you don't have a virtual reality (VR) headset connected, which is
   fine. VR's nice and all, but that's not really what we're going for here.
-* The `"info: Required Vulkan extension VK_KHR_surface not supported"` line is
-  where your troubles start. **Your [Vulkan][vulkan] installation is broken.**
-  That's bad, because it means you won't be able to run any GPU-accelerated
+* The `"info: Required Vulkan extension VK_KHR_surface not supported"` and
+  `"warn:  DXVK: No adapters found. Please check your device filter settings
+  and Vulkan setup."` lines are where your troubles start. **Your
+  [Vulkan][vulkan] and/or [DXVK][DXVK] installation is broken.** That's bad,
+  because it means you won't be able to run any GPU-accelerated
   [Vulkan][vulkan] games. Thankfully, *Fate/stay night* is so old that it runs
-  on decades-old potato PCs manufactured by RadioShack and doesn't really
-  benefit from GPU acceleration at all.
+  on decades-old potato PCs manufactured by RadioShack; it doesn't really
+  benefit from GPU acceleration. Still, your system has an unresolved "oh shit"
+  issue that will needlessly complicate your life until you finally fix it.
 
 You have two options here:
 
@@ -324,21 +344,25 @@ You have two options here:
   1. Disable the *Enable DXVK/VKD3D* setting.
   1. You're done. *Praise Ilya!*
 * **Fix your broken [Vulkan][vulkan] and [DXVK][dxvk] installation.** This is
-  the hard way, but you probably want to do this eventually *anyway*.
-  Instructions for properly installing and configuring [Vulkan][vulkan] and
-  [DXVK][dxvk] vary by platform. For example, users on Arch-based Linux distros
-  should:
-  1. Follow [the Vulkan installation instructions at the Arch
-     Wiki](https://wiki.archlinux.org/index.php/Vulkan#Installation).
-  1. Follow [the Wine installation instructions at the Arch
-     Wiki](https://wiki.archlinux.org/index.php/wine#Installation). **Note:
-     install `wine-staging` rather than `wine`.** Always use Wine Staging,
-     which is the bleeding-edge version of Wine that provides [DXVK][dxvk].
-     Never use standard Wine, which is the obsolete version of Wine that
-     provides literally nothing.
-  1. Watch [this YouTube video walking you through DXVK configuration under
-     Lutris with Wine
-     Staging](https://forums.lutris.net/t/how-to-setup-dxvk-on-lutris/1704).
+  the hard way, but you probably want to do this eventually *anyway*, because
+  something has gone super-hyper-mega wrong on your system. Do this (in order):
+  1. **Reinstall your video drivers.** This should *always* be the first thing
+     you do when hitting Vulkan and DXVK issues.
+  1. If that fails, **reinstall [Vulkan][vulkan] and [DXVK][dxvk].**
+     Instructions for properly installing and configuring [Vulkan][vulkan] and
+     [DXVK][dxvk] vary by platform. For example, users on Arch-based Linux
+     distros should:
+     1. Follow [the Vulkan installation instructions at the Arch
+        Wiki](https://wiki.archlinux.org/index.php/Vulkan#Installation).
+     1. Follow [the Wine installation instructions at the Arch
+        Wiki](https://wiki.archlinux.org/index.php/wine#Installation). **Note:
+        install `wine-staging` rather than `wine`.** Always use Wine Staging,
+        which is the bleeding-edge version of Wine that provides [DXVK][dxvk].
+        Never use standard Wine, which is the obsolete version of Wine that
+        provides literally nothing.
+     1. Watch [this YouTube video walking you through DXVK configuration under
+        Lutris with Wine
+        Staging](https://forums.lutris.net/t/how-to-setup-dxvk-on-lutris/1704).
 
 When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
 
