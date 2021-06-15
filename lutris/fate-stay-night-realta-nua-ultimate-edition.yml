@@ -8,7 +8,7 @@ results:
     script:
       files:
         - ultimate_edition_0_9_1: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
-        - lav_filters: https://github.com/Nevcairiel/LAVFilters/releases/download/0.74.1/LAVFilters-0.74.1-Installer.exe
+        - lav_filters: https://github.com/Nevcairiel/LAVFilters/releases/download/0.75/LAVFilters-0.75-Installer.exe
 
         #FIXME: Uncomment the following lines after adding support for the next stable
         #release of the Ultimate Edition.
@@ -33,6 +33,22 @@ results:
         exe: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe
         arch: win32
         prefix: $GAMEDIR
+
+      # The Ultimate Edition installer is fundamentally broken under WINE >=
+      # 6.6.1, which silently pretends to succeed despite failing to do
+      # anything with command-line errors resembling:
+      #     0108:err:module:import_dll Library setupapi.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+      #     0108:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
+      #     0108:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+      #     0108:err:module:import_dll Library user32.dll (which is needed by L"C:\\windows\\system32\\start.exe") not found
+      # This is a well-known issue purportedly resolved by WINE 6.7:
+      #     https://forum.winehq.org/viewtopic.php?f=8&t=35192
+      # Since we can confirm that WINE 6.10 suffers the same exact issue, we
+      # fallback to the most recent version of WINE preceding WINE 6.6.1
+      # supported by Lutris. See also this list of supported Lutris runners:
+      #     https://lutris.net/api/runners
+      wine:
+        version: lutris-6.1-3-x86_64
 
       installer:
         - task:
