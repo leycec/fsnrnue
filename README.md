@@ -68,7 +68,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
      1. **[Install *Lutris*][lutris].**
      1. **Install _Fate/stay night \[Réalta Nua\] Ultimate Edition_** with
         either:
-        * *(Recommended)* **[Our one-click installer][installer-remote],**
+        * *(Recommended)* [**Our one-click installer**][installer-remote],
           automating installation by transparently downloading and running this
           installer under *[Lutris][lutris].*
         * **Our offline installer,** manually runnable at the command line as
@@ -76,7 +76,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
           1. [Download this file][installer-local].
           1. Open a terminal to the directory containing that file.
           1. Copy-and-paste this command into that terminal:
-         
+
                  lutris -i fate-stay-night-realta-nua-ultimate-edition.yml
 
    * **macOS is currently unsupported,** as [Lutris][lutris] is currently
@@ -92,7 +92,7 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
 We strongly recommend:
 
 * **Enabling the *Patch* → *Options* → *Skip movies in-game* option.** Consider
-  watching these movies either online or via the **_Extras_** title option 
+  watching these movies either online or via the **_Extras_** title option
   available after successfully completing the Prologue. Attempting to play
   movies usually raises fatal exceptions (e.g., at the fade-to-white Prologue
   ending) with error messages resembling one or more of:
@@ -138,7 +138,7 @@ to properly download one or more patches for you:
 
 * An untranslated GUI error message entitled with indecipherable Japanese kanji
   and text resembling:
-  
+
   > ☐☐☐☐☐☐
   > file://./c/program/files/fate☐stay night[realta
   > nua] ultimate edition/patch.xp3 ☐☐ XP3 ☐☐☐☐
@@ -244,6 +244,47 @@ must be manually redownloaded. It would be the decensor patch, wouldn't it?
 
 …that's not even a question. You can tell because there's no question mark.
 
+#### I'm seeing a "The file …Fate.exe could not be found" error?
+
+Are you receiving an error resembling this dialog box:
+
+![The file …Fate.exe could not be found](https://user-images.githubusercontent.com/49215755/121794332-c2787680-cbf6-11eb-9cb8-2c52492102df.png)
+
+You might also be seeing a wall of milk-curdling command-line errors like:
+
+```
+0024:err:module:import_dll Library advapi32.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
+0024:err:module:import_dll Library rpcrt4.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
+0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library setupapi.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
+0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library user32.dll (which is needed by L"C:\\windows\\system32\\start.exe") not found
+0024:err:module:LdrInitializeThunk Importing dlls for L"C:\\windows\\system32\\start.exe" failed, status c0000135
+------------------------------------------------------
+warning: Note: command /home/user/.local/share/lutris/runners/wine/lutris-6.10-2-x86_64/bin/wine vc_redist.x86.exe /q returned status 53. Aborting.
+------------------------------------------------------
+Monitored process exited.
+Initial process has exited (return code: 256)
+All monitored processes have exited.
+Exit with returncode 256
+```
+
+You were probably trying to run [**our one-click
+installer**][installer-remote], right? If:
+
+* **Yes,** then [please run **our offline installer** instead](Installation).
+  While inconvenient, [our offline installer is hosted directly at this
+  repository](Installation) and thus guaranteed to include [bug fixes not yet
+  accepted by Lutris moderators into our one-click
+  installer](https://github.com/leycec/fsnrnue/issues/11) – including the fix
+  for this bug. The cost of convenience is indeed costly.
+* **No,** then continue to the next question.
+
 #### I'm seeing an error at "initialize.tjs(245)"?
 
 Are you receiving an error resembling `"==== An exception occured at
@@ -252,7 +293,7 @@ then we're all on the same page, which is nice.
 
 Did you also install the optional Vita patch? If:
 
-* **Yes,** then [please try reinstalling *without* that
+* **Yes,** then [please reinstall *without* that
   patch](https://github.com/leycec/fsnrnue/issues/9).
 * **No,** then continue to the next question.
 
