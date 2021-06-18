@@ -389,21 +389,17 @@ You have two options here:
   something has gone super-hyper-mega wrong on your system. Do this (in order):
   1. **Reinstall your video drivers.** This should *always* be the first thing
      you do when hitting Vulkan and DXVK issues.
-  1. If that fails, **reinstall [Vulkan][vulkan] and [DXVK][dxvk].**
-     Instructions for properly installing and configuring [Vulkan][vulkan] and
-     [DXVK][dxvk] vary by platform. For example, users on Arch-based Linux
-     distros should:
-     1. Follow [the Vulkan installation instructions at the Arch
-        Wiki](https://wiki.archlinux.org/index.php/Vulkan#Installation).
-     1. Follow [the Wine installation instructions at the Arch
-        Wiki](https://wiki.archlinux.org/index.php/wine#Installation). **Note:
-        install `wine-staging` rather than `wine`.** Always use Wine Staging,
-        which is the bleeding-edge version of Wine that provides [DXVK][dxvk].
-        Never use standard Wine, which is the obsolete version of Wine that
-        provides literally nothing.
-     1. Watch [this YouTube video walking you through DXVK configuration under
-        Lutris with Wine
-        Staging](https://forums.lutris.net/t/how-to-setup-dxvk-on-lutris/1704).
+  1. **Reinstall [Vulkan][vulkan] and [DXVK][dxvk].** Although instructions for
+     installing, configuring, and enabling [Vulkan][vulkan] and [DXVK][dxvk] in
+     Lutris vary by platform, the workflow always remains the same:
+     1. Verify [**your hardware supports Vulkan and
+        DXVK**][lutris-vulkan-requirements].
+     1. Install [**Vulkan drivers**][lutris-vulkan-install].
+     1. Enable [**DXVK in Lutris**][lutris-dxvk-video]. Note the [instructions
+        in the previously linked video may already be out-of-date by the time
+        you read
+        this](https://github.com/leycec/fsnrnue/issues/12#issuecomment-863539722).
+        ¯\\\_(ツ)\_/¯
 
 When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
 
@@ -474,6 +470,10 @@ If you enjoy this, you might also enjoy:
 [leycec-aokana]: https://github.com/leycec/aokana-linux
 [leycec-kiseki]:  https://github.com/leycec/kiseki-linux
 [lutris]: https://lutris.net
+[lutris-vulkan-requirements]: https://github.com/lutris/docs/blob/master/HowToDXVK.md
+[lutris-vulkan-install]: https://github.com/lutris/docs/blob/master/InstallingDrivers.md
+[lutris-dxvk-video]: https://youtu.be/X6Vk_J3p2KA
+[lutris-dxvk-releases]: https://github.com/doitsujin/dxvk/releases
 [nekonyan-aokana]: https://nekonyansoft.com/shop/product/22
 [playonmac]: https://www.playonmac.com
 [releases]: https://github.com/leycec/fsnrnue/releases
