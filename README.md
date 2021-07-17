@@ -297,19 +297,6 @@ Did you also install the optional Vita patch? If:
   patch](https://github.com/leycec/fsnrnue/issues/9).
 * **No,** then continue to the next question.
 
-#### That's also not what I'm seeing, though?
-
-Then here's what we're going to do:
-
-1. Run *Lutris.*
-1. Right-click the *Fate/stay night* entry.
-1. Click the *Show logs* menu item.
-1. Copy the contents of the displayed log to the clipboard.
-1. [Paste those contents into a new
-   issue of our issue tracker](https://github.com/leycec/fsnrnue/issues/new).
-
-We'll get you sorted right out. Promise.
-
 #### I see something about Vulkan and `dxvk` in those logs and a black screen on startup, I think?
 
 Do you see log errors resembling the following?
@@ -402,6 +389,47 @@ You have two options here:
         ¯\\\_(ツ)\_/¯
 
 When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
+
+#### I see a white screen but hear music playing on startup, maybe?
+
+Do you see a log error resembling the following?
+
+```
+13:39:14 (info) Changing screen mode succeeded
+13:39:14 ==== An exception occured at mainwindow.tjs(1029)[(property setter) fullScreen], VM ip = 837 ====
+13:39:14 -- Disassembled VM code --
+13:39:14 #(1029) 			windowSizeMenu.enabled	= !fullScreen;	//	EBhETCY̐ݒ̓EBhE\̂Ƃ̂
+13:39:14 00000831 gpd %1, %-2.*97	// *97 = (string)"fullScreen"
+13:39:14 00000835 lnot %1
+13:39:14 00000837 gpd %2, %-2.*98	// *98 = (string)"windowSizeMenu"
+13:39:14 -- Register dump --
+13:39:14 %-6=(int)1  %-5=(int)-1  %-4=(void)  %-3=(int)1  %-2=(object)(object 0x009EE4E0:0x00000000)
+13:39:14 %-1=(object)(object 0x059CC2B0:0x059CC2B0)  %0=(void)  %1=(int)0
+13:39:14 %2=(object)(object 0x04E5F4B0:0x04E5F4B0)  %3=(int)0  %4=(int)1080
+13:39:14 %5=(object)(object 0x04E5F4B0:0x04E5F4B0)  %6=(real)644  %7=(real)644
+13:39:14 -------------------------------------------------------------------------------------------------
+13:39:14 tXN[[hɈڍsł܂ł : Member "windowSizeMenu" does not exist
+```
+
+If so, **wonderful!** Well, not wonderful – but things could be worse. You
+could always be using a decades-old AMD Athlon(tm) II X2 240 CPU like @leycec,
+which is like a real-life Bad End the chip shortage inflicts on you.
+
+Unfortunately, you probably need to disable [Vulkan][vulkan] and [DXVK][dxvk]
+in Lutris. See the prior FAQ entry for detailed instructions, please.
+
+#### That's also not what I'm seeing, though?
+
+Then here's what we're going to do:
+
+1. Run *Lutris.*
+1. Right-click the *Fate/stay night* entry.
+1. Click the *Show logs* menu item.
+1. Copy the contents of the displayed log to the clipboard.
+1. [Paste those contents into a new
+   issue of our issue tracker](https://github.com/leycec/fsnrnue/issues/new).
+
+We'll get you sorted right out. Promise.
 
 ## Authors
 
