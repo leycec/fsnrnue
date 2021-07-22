@@ -60,11 +60,6 @@ night*](https://typemoon.fandom.com/wiki/Fate/stay_night).
         VII."](https://www.reddit.com/r/fatestaynight/comments/7qh6ho/fatestay_night_vn_installation_guide_vii)
      1. Then follow the [official Ultimate Edition instructions][ultimate-bl].
    * **Linux:**
-     1. _(Recommended)_ **[Install *Wine
-        Staging*](https://wiki.winehq.org/Wine-Staging).** See also
-        instructions for:
-        * [Debian-based distributions (e.g.,
-          Ubuntu)](https://www.linuxuprising.com/2019/09/how-to-install-wine-staging-development.html).
      1. **[Install *Lutris*][lutris].**
      1. **Install _Fate/stay night \[Réalta Nua\] Ultimate Edition_** with
         either:
@@ -183,17 +178,29 @@ the Taiga Dojo stamps just to unlock a ridiculous hot springs bath scene.
 <sup>Totally worth it.</sup>
 
 So, we've confirmed the Ultimate Edition installer failed to properly download
-one or more patches for you. These patches are locally corrupt and *must* be
-[manually redownloaded from Google Drive links listed under the **Mandatory
-patches** section of the original release notes for the Ultimate
-Edition][ultimate-bl] into the
-`fate-stay-night-realta-nua-ultimate-edition/drive_c/Program Files/Fate／stay
-night[Realta Nua] Ultimate Edition/` subdirectory to which the Ultimate Edition
-previously installed itself, overwriting each existing corrupt patch.
-If these links are not working all the patches can be downloaded as a single zip-file via https://www.mediafire.com/file/047tv8akannrti3/patch.zip/file using the password *ObviouslyFate*.
+one or more patches for you. (We are shocked Pikachu face.) These patches are
+now locally corrupt and *must* be:
 
-If you're unsure which corrupt patches need to be redownloaded, either blindly
-redownload *all* of them or:
+1. **Manually redownloaded** from either:
+   * _(Recommended)_ [**A monstrous 1.75GB password-protected Mediafire-hosted
+     zipfile containing every patch**][patches-mediafire], including patches
+     you really didn't want but will end up enabling anyway just because you
+     downloaded them. Yup, password-protected! Gotta keep out the riff-raff.
+     The password is:
+     * `ObviouslyFate`
+   * [Google Drive links listed under the **Mandatory patches** section of the
+     original release notes for the Ultimate Edition][ultimate-bl]. Google
+     Drive links are subject to questionable download quotas and thus
+     frequently fail, which only begs the question: "Google, y u make billions
+     but still such a cheapskate?"
+1. **Manually extracted and copied** into the
+   `fate-stay-night-realta-nua-ultimate-edition/drive_c/Program
+   Files/Fate／stay night[Realta Nua] Ultimate Edition/` subdirectory to which
+   the Ultimate Edition previously installed itself, overwriting each existing
+   corrupt patch.
+
+If you're unsure which corrupt patches need to be replaced, either blindly
+replace *all* of them or:
 
 * Inspect the aforementioned subdirectory for 0-byte filenames prefixed by
   `patch_`: e.g.,
@@ -240,6 +247,8 @@ drwxr-xr-x  2 leycec leycec 4.0K Feb 14 01:23 savedata
 
 In both cases, the decensor patch (i.e., `patch_decensor.xp3`) is corrupt and
 must be manually redownloaded. It would be the decensor patch, wouldn't it?
+
+![shocked Pikachu face](https://user-images.githubusercontent.com/217028/126600245-125ac88c-7d1d-4f5d-8ae7-091a015a6d90.png)
 
 #### That's also not what I'm seeing.
 
@@ -504,6 +513,7 @@ If you enjoy this, you might also enjoy:
 [lutris-dxvk-video]: https://youtu.be/X6Vk_J3p2KA
 [lutris-dxvk-releases]: https://github.com/doitsujin/dxvk/releases
 [nekonyan-aokana]: https://nekonyansoft.com/shop/product/22
+[patches-mediafire]: https://www.mediafire.com/file/047tv8akannrti3/patch.zip/file
 [playonmac]: https://www.playonmac.com
 [releases]: https://github.com/leycec/fsnrnue/releases
 [ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/8229
