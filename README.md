@@ -190,6 +190,7 @@ Edition][ultimate-bl] into the
 `fate-stay-night-realta-nua-ultimate-edition/drive_c/Program Files/Fate／stay
 night[Realta Nua] Ultimate Edition/` subdirectory to which the Ultimate Edition
 previously installed itself, overwriting each existing corrupt patch.
+If these links are not working all the patches can be downloaded as a single zip-file via https://www.mediafire.com/file/047tv8akannrti3/patch.zip/file using the password *ObviouslyFate*.
 
 If you're unsure which corrupt patches need to be redownloaded, either blindly
 redownload *all* of them or:
