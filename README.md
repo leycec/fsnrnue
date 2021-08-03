@@ -392,11 +392,15 @@ You have two options here:
      1. Verify [**your hardware supports Vulkan and
         DXVK**][lutris-vulkan-requirements].
      1. Install [**Vulkan drivers**][lutris-vulkan-install].
-     1. Enable [**DXVK in Lutris**][lutris-dxvk-video]. Note the [instructions
-        in the previously linked video may already be out-of-date by the time
-        you read
-        this](https://github.com/leycec/fsnrnue/issues/12#issuecomment-863539722).
-        ¯\\\_(ツ)\_/¯
+     1. Download [**DXVK for Lutris**][lutris-dxvk-releases] (checked to work with version 1.9.1 but if newer version are available experimenting is always an option).
+         * You could also compile the binaries yourself if you want to but I didn't feel like installing a gigabyte worth of dependencies for that.
+     2. Extract the files to your lutris dxvk folder (~/.local/share/lutris/runtime/dxvk by default. If you changed this you are on your own.).
+     3. Open lutris and rightclick the game and click Configure.
+     4. Open the runner options tab
+     5. Tick the box: Advanced options.
+     6. Type the name of the folder you dropped in your lutris dxvk folder (for example: dxvk-1.9.1).
+     7. Save.
+     8. Launch the game.
 
 When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
 
