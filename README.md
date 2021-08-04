@@ -392,15 +392,36 @@ You have two options here:
      1. Verify [**your hardware supports Vulkan and
         DXVK**][lutris-vulkan-requirements].
      1. Install [**Vulkan drivers**][lutris-vulkan-install].
-     1. Download [**DXVK for Lutris**][lutris-dxvk-releases] (checked to work with version 1.9.1 but if newer version are available experimenting is always an option).
-         * You could also compile the binaries yourself if you want to but I didn't feel like installing a gigabyte worth of dependencies for that.
-     2. Extract the files to your lutris dxvk folder (~/.local/share/lutris/runtime/dxvk by default. If you changed this you are on your own.).
-     3. Open lutris and rightclick the game and click Configure.
-     4. Open the runner options tab
-     5. Tick the box: Advanced options.
-     6. Type the name of the folder you dropped in your lutris dxvk folder (for example: dxvk-1.9.1).
-     7. Save.
-     8. Launch the game.
+     1. Download [**DXVK**][dxvk-releases]. Note that [DXVK 1.9.1][dxvk-1.9.1]
+        has been verified to work with *Fate/stay night.* If you prefer
+        dangerously experimenting with other DXVK versions, download either:
+        * (*Recommended*) The precompiled **release binary tarball** of your
+          choice (e.g., `dxvk-1.9.1.tar.gz` for DXVK 1.9.1).
+        * The uncompiled **source code tarball** of your choice. Unless you use
+          a bleeding-edge rolling-released source-friendly Linux distribution
+          like Arch or Gentoo Linux, <sup>...which you don't, because you're
+          reading this</sup> you do *not* want to walk this dark road. To quote
+          @kaasknak: "You could also compile the binaries yourself if you want
+          to but I didn't feel like installing a gigabyte worth of dependencies
+          for that." You were warned but you're still doing this anyway, aren't
+          you!?!?
+     1. Extract the **DXVK tarball you just downloaded** into your
+        user-specific Lutris DXVK subdirectory (defaulting to
+        `~/.local/share/lutris/runtime/dxvk`): e.g.,
+
+            tar -xvzf dxvk-1.9.1.tar.gz -C ~/.local/share/lutris/runtime/dxvk
+
+     1. Run **Lutris.**
+     1. Right-click *Fate/stay night.*
+     1. Click *Configure.*
+     1. Click the *Runner Options* tab.
+     1. Check the *Show advanced options* checkbox at the lower left.
+     1. Enter the basename of the directory you just extracted (e.g.,
+        `dxvk-1.9.1` for DXVK 1.9.1) into the edit box to the right of the
+        *DXVK version* label, replacing the prior contents of that box if any.
+     1. Click *Save*.
+     1. Rejoice as your CPU and GPU fans run as quiet as Sakura on a bad night
+        out at the Shirou's.
 
 When in doubt, just disable [Vulkan][vulkan] and [DXVK][dxvk].
 
@@ -505,6 +526,8 @@ If you enjoy this, you might also enjoy:
 [beasts-lair]: https://forums.nrvnqsr.com
 [chuuni]: https://forums.fuwanovel.net/topic/1820-chuuni-what-is-this-genre
 [dxvk]: https://github.com/doitsujin/dxvk
+[dxvk-releases]: https://github.com/doitsujin/dxvk/releases
+[dxvk-1.9.1]: https://github.com/doitsujin/dxvk/releases/download/v1.9.1/dxvk-1.9.1.tar.gz
 [kiseki]: https://en.wikipedia.org/wiki/Trails_(series)
 [kiseki-soravoice]: https://github.com/ZhenjianYang/SoraVoice
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
@@ -515,7 +538,6 @@ If you enjoy this, you might also enjoy:
 [lutris-vulkan-requirements]: https://github.com/lutris/docs/blob/master/HowToDXVK.md
 [lutris-vulkan-install]: https://github.com/lutris/docs/blob/master/InstallingDrivers.md
 [lutris-dxvk-video]: https://youtu.be/X6Vk_J3p2KA
-[lutris-dxvk-releases]: https://github.com/doitsujin/dxvk/releases
 [nekonyan-aokana]: https://nekonyansoft.com/shop/product/22
 [patches-mediafire]: https://www.mediafire.com/file/047tv8akannrti3/patch.zip/file
 [playonmac]: https://www.playonmac.com
