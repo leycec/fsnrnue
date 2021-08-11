@@ -48,7 +48,7 @@ results:
       # supported by Lutris. See also this list of supported Lutris runners:
       #     https://lutris.net/api/runners
       wine:
-        version: lutris-6.1-3-x86_64
+        version: lutris-6.14-3-x86_64
 
       installer:
         - task:
