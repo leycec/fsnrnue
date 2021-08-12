@@ -34,9 +34,13 @@ results:
         arch: win32
         prefix: $GAMEDIR
 
+      #FIXME: Remove this entirely by 2021 Q2 or so, where most of our userbase
+      #should be expected to be using a newer version of Lutris that ships
+      #WINE >= 6.14.3 by default. Until then, this necessarily stays.
+
       # The Ultimate Edition installer is fundamentally broken under WINE >=
-      # 6.6.1, which silently pretends to succeed despite failing to do
-      # anything with command-line errors resembling:
+      # 6.6.1 < 6.14.3, which silently pretends to succeed despite failing to
+      # do anything with command-line errors resembling:
       #     0108:err:module:import_dll Library setupapi.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
       #     0108:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
       #     0108:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
@@ -44,8 +48,8 @@ results:
       # This is a well-known issue purportedly resolved by WINE 6.7:
       #     https://forum.winehq.org/viewtopic.php?f=8&t=35192
       # Since we can confirm that WINE 6.10 suffers the same exact issue, we
-      # fallback to the most recent version of WINE preceding WINE 6.6.1
-      # supported by Lutris. See also this list of supported Lutris runners:
+      # avoid all WINE versions in this problematic range. See also this list
+      # of supported Lutris runners:
       #     https://lutris.net/api/runners
       wine:
         version: lutris-6.14-3-x86_64
