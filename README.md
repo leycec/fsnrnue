@@ -453,6 +453,11 @@ which is like a real-life Bad End the chip shortage inflicts on you.
 Unfortunately, you probably need to disable [Vulkan][vulkan] and [DXVK][dxvk]
 in Lutris. See the prior FAQ entry for detailed instructions, please.
 
+#### It seems to work but after chosing mid-story the game freezes.
+
+For some reason your installation does not play nice with Linux window managers.
+The easiest way to solve this is to run the app in a windows virtual desktop. To configure your game for this: Right click the game in lutris. Click **Config**, go to the tab **Runner options**, activate the option **Windowed (virtual desktop)**. Save and start the game again.
+
 #### That's also not what I'm seeing, though?
 
 Then here's what we're going to do:
