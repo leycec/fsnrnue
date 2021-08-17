@@ -417,10 +417,10 @@ in Lutris. See the prior FAQ entry for detailed instructions, please.
 
 **That's horrible.** But you're not alone. So, that's great. I guess?
 
-For dark reasons beyond all carnal human knowledge, :superscript:`I blame
-Nasu.` *Fate/stay night* is not playing ball with your Linux windowing system.
-Circumvent this by isolating *Fate/stay night* to a **windowed virtual
-desktop** instead of running *Fate/stay night* full-screened:
+For dark reasons beyond all carnal human knowledge, <sup>I blame Nasu.</sup>
+*Fate/stay night* is not playing ball with your Linux windowing system.
+Circumvent this by isolating the game to a **windowed virtual desktop**
+(instead of running the game full-screened):
 
 1. Run *Lutris.*
 1. Right-click the *Fate/stay night* entry.
@@ -429,7 +429,7 @@ desktop** instead of running *Fate/stay night* full-screened:
 1. Enable the *Windowed (virtual desktop)* setting.
 1. Click *Save.*
 
-Behold! A usable menu bar. Yes, it is beautiful.
+Behold! A usable menu bar. Yes, it is beautiful. Yes, it is sad.
 
 #### I'm seeing a "The file …Fate.exe could not be found" error?
 
