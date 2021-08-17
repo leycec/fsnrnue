@@ -254,47 +254,6 @@ must be manually redownloaded. It would be the decensor patch, wouldn't it?
 
 …that's not even a question. You can tell because there's no question mark.
 
-#### I'm seeing a "The file …Fate.exe could not be found" error?
-
-Are you receiving an error resembling this dialog box:
-
-![The file …Fate.exe could not be found](https://user-images.githubusercontent.com/49215755/121794332-c2787680-cbf6-11eb-9cb8-2c52492102df.png)
-
-You might also be seeing a wall of milk-curdling command-line errors like:
-
-```
-0024:err:module:import_dll Library advapi32.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
-0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
-0024:err:module:import_dll Library rpcrt4.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
-0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
-0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
-0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
-0024:err:module:import_dll Library setupapi.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
-0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
-0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
-0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
-0024:err:module:import_dll Library user32.dll (which is needed by L"C:\\windows\\system32\\start.exe") not found
-0024:err:module:LdrInitializeThunk Importing dlls for L"C:\\windows\\system32\\start.exe" failed, status c0000135
-------------------------------------------------------
-warning: Note: command /home/user/.local/share/lutris/runners/wine/lutris-6.10-2-x86_64/bin/wine vc_redist.x86.exe /q returned status 53. Aborting.
-------------------------------------------------------
-Monitored process exited.
-Initial process has exited (return code: 256)
-All monitored processes have exited.
-Exit with returncode 256
-```
-
-You were probably trying to run [**our one-click
-installer**][installer-remote], right? If:
-
-* **Yes,** then [please run **our offline installer** instead](Installation).
-  While inconvenient, [our offline installer is hosted directly at this
-  repository](Installation) and thus guaranteed to include [bug fixes not yet
-  accepted by Lutris moderators into our one-click
-  installer](https://github.com/leycec/fsnrnue/issues/11) – including the fix
-  for this bug. The cost of convenience is indeed costly.
-* **No,** then continue to the next question.
-
 #### I'm seeing an error at "initialize.tjs(245)"?
 
 Are you receiving an error resembling `"==== An exception occured at
@@ -380,6 +339,7 @@ You have two options here:
   1. Click the *Configure* menu item.
   1. Click the *Runner options* tab.
   1. Disable the *Enable DXVK/VKD3D* setting.
+  1. Click *Save.*
   1. You're done. *Praise Ilya!*
 * **Fix your broken [Vulkan][vulkan] and [DXVK][dxvk] installation.** This is
   the hard way, but you probably want to do this eventually *anyway*, because
@@ -453,10 +413,64 @@ which is like a real-life Bad End the chip shortage inflicts on you.
 Unfortunately, you probably need to disable [Vulkan][vulkan] and [DXVK][dxvk]
 in Lutris. See the prior FAQ entry for detailed instructions, please.
 
-#### It seems to work but after chosing mid-story the game freezes.
+#### I'm seeing the game freeze whenever I use the menu bar, I guess?
 
-For some reason your installation does not play nice with Linux window managers.
-The easiest way to solve this is to run the app in a windows virtual desktop. To configure your game for this: Right click the game in lutris. Click **Config**, go to the tab **Runner options**, activate the option **Windowed (virtual desktop)**. Save and start the game again.
+**That's horrible.** But you're not alone. So, that's great. I guess?
+
+For dark reasons beyond all carnal human knowledge, :superscript:`I blame
+Nasu.` *Fate/stay night* is not playing ball with your Linux windowing system.
+Circumvent this by isolating *Fate/stay night* to a **windowed virtual
+desktop** instead of running *Fate/stay night* full-screened:
+
+1. Run *Lutris.*
+1. Right-click the *Fate/stay night* entry.
+1. Click the *Configure* menu item.
+1. Click the *Runner options* tab.
+1. Enable the *Windowed (virtual desktop)* setting.
+1. Click *Save.*
+
+Behold! A usable menu bar. Yes, it is beautiful.
+
+#### I'm seeing a "The file …Fate.exe could not be found" error?
+
+Are you receiving an error resembling this dialog box:
+
+![The file …Fate.exe could not be found](https://user-images.githubusercontent.com/49215755/121794332-c2787680-cbf6-11eb-9cb8-2c52492102df.png)
+
+You might also be seeing a wall of milk-curdling command-line errors like:
+
+```
+0024:err:module:import_dll Library advapi32.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\rpcrt4.dll") not found
+0024:err:module:import_dll Library rpcrt4.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
+0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\setupapi.dll") not found
+0024:err:module:import_dll Library setupapi.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library ucrtbase.dll (which is needed by L"C:\\windows\\system32\\version.dll") not found
+0024:err:module:import_dll Library version.dll (which is needed by L"C:\\windows\\system32\\user32.dll") not found
+0024:err:module:import_dll Library user32.dll (which is needed by L"C:\\windows\\system32\\start.exe") not found
+0024:err:module:LdrInitializeThunk Importing dlls for L"C:\\windows\\system32\\start.exe" failed, status c0000135
+------------------------------------------------------
+warning: Note: command /home/user/.local/share/lutris/runners/wine/lutris-6.10-2-x86_64/bin/wine vc_redist.x86.exe /q returned status 53. Aborting.
+------------------------------------------------------
+Monitored process exited.
+Initial process has exited (return code: 256)
+All monitored processes have exited.
+Exit with returncode 256
+```
+
+You were probably trying to run [**our one-click
+installer**][installer-remote], right? If:
+
+* **Yes,** then [please run **our offline installer** instead](Installation).
+  While inconvenient, [our offline installer is hosted directly at this
+  repository](Installation) and thus guaranteed to include [bug fixes not yet
+  accepted by Lutris moderators into our one-click
+  installer](https://github.com/leycec/fsnrnue/issues/11) – including the fix
+  for this bug. The cost of convenience is indeed costly.
+* **No,** then continue to the next question.
 
 #### That's also not what I'm seeing, though?
 
