@@ -170,6 +170,35 @@ to properly download one or more patches for you:
 16:22:47 trace : startup.tjs(27)[(top level script) global] <-- startup
 ```
 
+#### What are "log error messages"?
+
+**Okay.** We're gonna have to take you back to the year... *1979.* Apparently,
+people were actually alive back then. We know this, because 1979 was the year
+[Bourne shell and thus effectively POSIX and UNIX-as-we-all-know-it-today was
+bourne][unix-bourne]. Get it, *bourne*? <sup>Yes. I'll stop now.</sup>
+
+Because you want to know how to get Lutris logs, you're probably using the
+default UNIX shell under most Linux distributions: either [Bash (Bourne-Again
+Shell)][unix-bash] or [zsh][unix-zsh]. Both historically descend from [Bourne
+shell][unix-bourne], which means the answer here is the same. In either case:
+
+1. Open a command-line (CLI) terminal.
+1. To log output from our **online installer**, copy-and-paste this command:
+
+        lutris 2>& ohgodeverythingbroke.log
+
+1. To log output from our **offline installer**, copy-and-paste this command:
+
+        lutris -i fate-stay-night-realta-nua-ultimate-edition.yml 2>& ohgodeverythingbroke.log
+
+Log error messages will now appear in the file `ohgodeverythingbroke.log`. When
+reporting issues to our [issue tracker][issue-tracker], please either:
+
+* **Copy-and-paste** the contents of that file into your issue.
+* **Upload** that entire file as an attachment with your issue.
+
+Please be patient. Sakura will attend to your "needs" shortly.
+
 #### That's what I'm seeing, I think?
 
 **Great!** Well, not great – but things could be worse. You could be Shiro in
@@ -551,8 +580,9 @@ If you enjoy this, you might also enjoy:
 [kiseki-soravoice]: https://github.com/ZhenjianYang/SoraVoice
 [installer-local]: /lutris/fate-stay-night-realta-nua-ultimate-edition.yml
 [installer-remote]: https://leycec.github.io/fsnrnue/lutris/installer_redirect.html
+[issue-tracker]: https://github.com/leycec/fsnrnue/issues
 [leycec-aokana]: https://github.com/leycec/aokana-linux
-[leycec-kiseki]:  https://github.com/leycec/kiseki-linux
+[leycec-kiseki]: https://github.com/leycec/kiseki-linux
 [lutris]: https://lutris.net
 [lutris-vulkan-requirements]: https://github.com/lutris/docs/blob/master/HowToDXVK.md
 [lutris-vulkan-install]: https://github.com/lutris/docs/blob/master/InstallingDrivers.md
@@ -563,4 +593,7 @@ If you enjoy this, you might also enjoy:
 [releases]: https://github.com/leycec/fsnrnue/releases
 [ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/8229
 [ultimate-lutris]: https://lutris.net/games/fatestay-night
+[unix-bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
+[unix-bourne]: https://en.wikipedia.org/wiki/Bourne_shell
+[unix-zsh]: https://en.wikipedia.org/wiki/Z_shell
 [vulkan]: https://en.wikipedia.org/wiki/Vulkan_(API)
