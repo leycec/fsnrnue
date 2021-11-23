@@ -170,7 +170,7 @@ to properly download one or more patches for you:
 16:22:47 trace : startup.tjs(27)[(top level script) global] <-- startup
 ```
 
-#### What are "log error messages"?
+#### Nice magic words you wizardperson. What are these "log error messages"?
 
 **Okay.** We're gonna have to take you back to the year... *1979.* Apparently,
 people were actually alive back then. We know this, because 1979 was the year
@@ -199,7 +199,7 @@ reporting issues to our [issue tracker][issue-tracker], please either:
 
 Please be patient. Sakura will attend to your "needs" shortly.
 
-#### That's what I'm seeing, I think?
+#### Okay. I am indeed seeing this exception, I think?
 
 **Great!** Well, not great – but things could be worse. You could be Shiro in
 any of the Dead Ends you're about to compulsively read just to collect all of
