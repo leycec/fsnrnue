@@ -51,8 +51,9 @@ results:
       # avoid all WINE versions in this problematic range. See also this list
       # of supported Lutris runners:
       #     https://lutris.net/api/runners
+      # In order to keep with the newer versions of wine the default version is set to 6.21-5. This has been tested and shown to work.
       wine:
-        version: lutris-6.14-3-x86_64
+        version: lutris-6.21-5-x86_64
 
       installer:
         - task:
