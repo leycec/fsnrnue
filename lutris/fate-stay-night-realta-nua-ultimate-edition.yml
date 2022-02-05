@@ -34,10 +34,9 @@ results:
         arch: win32
         prefix: $GAMEDIR
 
-      #FIXME: Remove this entirely by 2021 Q2 or so, where most of our userbase
-      #should be expected to be using a newer version of Lutris that ships
-      #WINE >= 6.14.3 by default. Until then, this necessarily stays.
-
+      #FIXME: Preserved in the likelihood that a subsequent WINE version will
+      #yet again break F/SN, at which we'll have to temporarily pin against a
+      #WINE version known to support F/SN. Thankfully, WINE is behaving itself.
       # The Ultimate Edition installer is fundamentally broken under WINE >=
       # 6.6.1 < 6.14.3, which silently pretends to succeed despite failing to
       # do anything with command-line errors resembling:
@@ -52,8 +51,8 @@ results:
       # of supported Lutris runners:
       #     https://lutris.net/api/runners
       # In order to keep with the newer versions of wine the default version is set to 6.21-5. This has been tested and shown to work.
-      wine:
-        version: lutris-6.21-5-x86_64
+      #wine:
+      #  version: lutris-6.21-5-x86_64
 
       installer:
         - task:
