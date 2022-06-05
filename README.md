@@ -501,6 +501,16 @@ installer**][installer-remote], right? If:
   for this bug. The cost of convenience is indeed costly.
 * **No,** then continue to the next question.
 
+#### When starting the game I see "Your kernel is not patched for fsynch. Please get a patched kernel to use fsynch."
+
+You are probably running with an older kernel.
+Run the following command:
+
+        uname -r
+        
+If the kernel is older than version 5.16 it does not support fsynch. Update your kernel or wait for the upgrade from your distro maintainer.
+Until then: just deactivate fsynch.
+
 #### That's also not what I'm seeing, though?
 
 Then here's what we're going to do:
