@@ -601,7 +601,7 @@ If you enjoy this, you might also enjoy:
 [patches-mediafire]: https://www.mediafire.com/file/047tv8akannrti3/patch.zip/file
 [playonmac]: https://www.playonmac.com
 [releases]: https://github.com/leycec/fsnrnue/releases
-[ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/8229
+[ultimate-bl]: https://forums.nrvnqsr.com/showthread.php/9101-Fate-Stay-Night-Realta-Nua-Ultimate-Edition-2022
 [ultimate-lutris]: https://lutris.net/games/fatestay-night
 [unix-bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [unix-bourne]: https://en.wikipedia.org/wiki/Bourne_shell

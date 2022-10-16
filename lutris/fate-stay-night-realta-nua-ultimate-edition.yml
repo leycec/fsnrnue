@@ -30,7 +30,7 @@ results:
         - game_ub_crack: N/A:Select source file "Unlimited Blade Works Crack.rar"
 
       game:
-        exe: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe
+        exe: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe"
         arch: win32
         prefix: $GAMEDIR
 
@@ -62,25 +62,25 @@ results:
             prefix: $GAMEDIR
         - extract:
             file: ultimate_edition_0_9_1
-            dst: $GAMEDIR/drive_c/Program Files
+            dst: "$GAMEDIR/drive_c/Program Files"
         - extract:
             file: game_fa
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-"
         - extract:
             file: game_fa_crack
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Fate-"
         - extract:
             file: game_hf
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-"
         - extract:
             file: game_hf_crack
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Heaven's Feel-"
         - extract:
             file: game_ub
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-"
         - extract:
             file: game_ub_crack
-            dst: $GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-
+            dst: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta nua] -Unlimited Blade Works-"
         - task:
             description: Installing winetricks-based dependencies...
             name: winetricks
@@ -94,7 +94,7 @@ results:
         - task:
             description: Installing Fate/stay night [Realta Nua] Ultimate Edition...
             name: wineexec
-            executable: $GAMEDIR/drive_c/Program Files/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe
+            executable: "$GAMEDIR/drive_c/Program Files/Fate／stay night [Réalta Nua] Ultimate Edition Setup.exe"
             prefix: $GAMEDIR
         #FIXME: Extract the 1.0.0 beta patches here.
         #FIXME: We probably need to manually delete the
