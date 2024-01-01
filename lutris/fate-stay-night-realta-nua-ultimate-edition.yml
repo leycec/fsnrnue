@@ -7,7 +7,7 @@ results:
 
     script:
       files:
-        - ultimate_edition_0_9_1: https://github.com/leycec/fsnrnue/releases/download/2019.03.19/fsnrnue-2019.03.19-32.zip
+        - ultimate_edition_1_1_4: https://github.com/leycec/fsnrnue/releases/download/2023.04.11/fsnrnue-2023.04.11.zip
 
         #FIXME: Uncomment the following lines after adding support for the next stable
         #release of the Ultimate Edition.
@@ -60,7 +60,7 @@ results:
             arch: win64
             prefix: $GAMEDIR
         - extract:
-            file: ultimate_edition_0_9_1
+            file: ultimate_edition_1_1_4
             dst: "$GAMEDIR/drive_c/Program Files"
         - extract:
             file: game_fa
