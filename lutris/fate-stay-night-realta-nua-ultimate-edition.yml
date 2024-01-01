@@ -29,8 +29,8 @@ results:
         - game_ub_crack: N/A:Select source file "Unlimited Blade Works Crack.rar"
 
       game:
-        exe: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate.exe"
-        arch: win32
+        exe: "$GAMEDIR/drive_c/Program Files/Fate／stay night[Realta Nua] Ultimate Edition/Fate64.exe"
+        arch: win64
         prefix: $GAMEDIR
 
       #FIXME: Preserved in the likelihood that a subsequent WINE version will
@@ -57,7 +57,7 @@ results:
         - task:
             description: Creating WINE prefix...
             name: create_prefix
-            arch: win32
+            arch: win64
             prefix: $GAMEDIR
         - extract:
             file: ultimate_edition_0_9_1
