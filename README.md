@@ -524,6 +524,57 @@ Then here's what we're going to do:
 
 We'll get you sorted right out. Promise.
 
+#### About movies
+
+FSN has 3 routes played in that order: Fate, Unlimited Blade Works and Heavens
+Feel. When a route has been completed the next one opens. The title screen
+changes depending on the unlocked route. Although this is a visual novel, there
+are several movies that can be played during the game or from the `Extra/Movie`
+menu. The following list may not be complete:
+
+| Movie | How to view |
+| --- | --- |
+| Fate opening (PS2) | complete prologue on first playthrough<br>available in Extra/movie menu from that point |
+| Fate opening (PC) | available in Extra/Movie menu after completing prologue on first playthrough |
+| Fate opening (PS Vita) | played at the end of day 3 on Fate route |
+| UBW opening (PS2) | complete prologue when title screen shows Unlimited Blade Works<br>available in Extra/movie menu from that point |
+| UBW opening (PC) | available in Extra/Movie menu after completing prologue when title screen shows UBW |
+| UBW opening (PS Vita) | played at the end of day 3 on UBW route |
+| HF opening (PS2) | complete prologue when title screen shows Heaven's Feel<br>available in Extra/Movie menu from that point |
+| HF opening (PS Vita) | played at the end of day 3 on HF route |
+
+Most of them can be found on streaming platforms very easily and not being able
+to play them should not hinder game experience at all. To play them, it is
+necessary to use the latest patches from Beast Lair (1.0.0 at the current
+time). The following advices may also be of help.
+
+Necessary settings to play movies are:
+
+- Patch > Vita additions: all checked
+- Patch > Movies: check `force movie playback using mpv`, uncheck `skip movies in-game`
+
+Recommended settings to minimize occurences of graphical glitches are:
+
+- Display > Window
+- Display > Aspect ratio: standard
+
+Since another program (mpv) is used to play movies, the following
+recommendations may also be of use:
+
+Playing with fullscreen may lead to graphical glitches in game once video
+stops. Or not, your mileage may vary. Pressing `ALT TAB` may be necessary to
+bring mpv player on foreground whether in windowed or fullscreen mode.
+
+Using `CTRL` to fast forward to start of movie may lead to in game sounds to
+keep playing while the movie is playing. It is best to use `CTRL` with care and
+proceed slowly till movie starts.
+
+Lastly, when browsing movies in the `Extra/Movie` menu, one may encounter an
+error dialog box showing `cannot convert the variable type ((void) to Object)`.
+It happens when using mouse to browse to the right (either clicking on the
+scroll bar or using the mouse wheel). Using the left/right arrows of the
+keyboard allows to select unseen thumbnails without crashing the game.
+
 ## Authors
 
 Authoritative credit for the Ultimate Edition and bundled patches goes entirely
